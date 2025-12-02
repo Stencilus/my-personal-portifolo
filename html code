@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Use Inter Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- CONSOLIDATED STYLES (CSS) -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -40,6 +42,21 @@
         .tab-content {
             padding-top: 1rem;
         }
+        /* Custom styles for Skill Badges */
+        .skill-badge {
+            display: inline-block;
+            padding: 0.4rem 0.75rem;
+            border-radius: 9999px; /* Fully rounded */
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* font-medium */
+            background-color: rgba(56, 189, 248, 0.2); /* Light blue tint */
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+            transition: background-color 0.2s;
+        }
+        .skill-badge:hover {
+            background-color: rgba(56, 189, 248, 0.4);
+        }
     </style>
 </head>
 <body class="p-4 md:p-10">
@@ -48,7 +65,7 @@
         
         <!-- Header Section -->
         <header class="text-center pb-8 border-b border-[#30363d] mb-8">
-            <!-- Profile Picture Placeholder -->
+            <!-- Profile Picture Placeholder: Replace 'https://placehold.co/...' with the actual path to your 'dube.jpg' -->
             <img src="https://placehold.co/128x128/38bdf8/0d1117?text=TSD" 
                  alt="Tavonga Stencilus Dube Profile Picture" 
                  class="rounded-full w-32 h-32 mx-auto mb-6 border-4 border-[#38bdf8] object-cover shadow-lg">
@@ -195,7 +212,7 @@
 
     </div>
 
-    <!-- Custom Tailwind Style for Skill Badges and JS Logic -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
         // JavaScript for Tab Interactivity
         function showTab(tabId) {
@@ -204,7 +221,8 @@
                 content.classList.add('hidden');
             });
             document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('border-[#38bdf8]', 'text-[#38bdf8]');
+                // Ensure only Tailwind classes are used for dynamic styling
+                button.classList.remove('border-[#38bdf8]', 'text-[#38bdf8]', 'active');
                 button.classList.add('border-transparent', 'text-gray-400', 'hover:text-[#5eead4]');
             });
 
@@ -216,7 +234,7 @@
 
             const selectedButton = document.getElementById(`tab-${tabId}`);
             if (selectedButton) {
-                selectedButton.classList.add('border-[#38bdf8]', 'text-[#38bdf8]');
+                selectedButton.classList.add('border-[#38bdf8]', 'text-[#38bdf8]', 'active');
                 selectedButton.classList.remove('border-transparent', 'text-gray-400', 'hover:text-[#5eead4]');
             }
         }
@@ -226,7 +244,7 @@
             showTab('current'); 
         });
 
-        // Tailwind Config for colors
+        // Tailwind Config for colors (Needs to be here if custom colors are used)
         tailwind.config = {
             theme: {
                 extend: {
@@ -239,22 +257,5 @@
             },
         }
     </script>
-    <style>
-        .skill-badge {
-            display: inline-block;
-            padding: 0.4rem 0.75rem;
-            border-radius: 9999px; /* Fully rounded */
-            font-size: 0.875rem; /* text-sm */
-            font-weight: 500; /* font-medium */
-            background-color: rgba(56, 189, 248, 0.2); /* Light blue tint */
-            color: #38bdf8;
-            border: 1px solid #38bdf8;
-            transition: background-color 0.2s;
-        }
-        .skill-badge:hover {
-            background-color: rgba(56, 189, 248, 0.4);
-        }
-    </style>
-
 </body>
 </html>
