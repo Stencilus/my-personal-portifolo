@@ -48,6 +48,10 @@
             border-color: transparent;
             color: #9ca3af; /* Gray text color */
         }
+        .tab-button:hover:not(.active) {
+            color: #38bdf8;
+            border-color: #38bdf8;
+        }
         .tab-content {
             padding-top: 1rem;
         }
@@ -82,12 +86,19 @@
             <h1 class="text-4xl md:text-5xl font-extrabold text-[#5eead4]">Tavonga Stencilus Dube</h1>
             <p class="mt-2 text-xl font-medium text-gray-400">BSc Artificial Intelligence Student | Africa University</p>
             <div class="mt-4 flex justify-center space-x-4">
-                <!-- Added aria-label for accessibility -->
-                <a href="#" class="text-gray-400 hover:text-[#5eead4] transition duration-200" aria-label="GitHub Profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.6c3.25 0 4.2-.76 4.2-4.2 0-1.12-.5-2.14-1.36-2.9C18.2 6.8 18.2 6.6 18.2 6.6c0-.88-.22-2.14-1-2.6 0 0-1 0-3 1.25S10 5.8 10 5.8c-.85-.45-1.95-.7-3.15-.7C4.65 5.1 3 6.6 3 9.4c0 1.12.5 2.14 1.36 2.9C4.8 12.8 4.8 13 4.8 13s-.02.48 0 1.25c0 3.44.95 4.2 4.2 4.2a4.8 4.8 0 0 0 1 3.6v4"/><circle cx="12" cy="12" r="10"/></svg>
+                <!-- GitHub icon -->
+                <a href="https://github.com/Stencilus" target="_blank" class="text-gray-400 hover:text-[#5eead4] transition duration-200" aria-label="GitHub Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-[#5eead4] transition duration-200" aria-label="LinkedIn Profile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                <!-- LinkedIn icon -->
+                <a href="https://linkedin.com/in/tavonga-stencilus-dube-2168442b3" target="_blank" class="text-gray-400 hover:text-[#5eead4] transition duration-200" aria-label="LinkedIn Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
                 </a>
             </div>
         </header>
@@ -137,7 +148,9 @@
                         <span class="skill-badge">Data Science</span>
                         <span class="skill-badge">IoT</span>
                         <span class="skill-badge">Mathematics</span>
-                        <span class="skill-badge">ML Packages (e.g., TensorFlow, PyTorch, Scikit-learn)</span>
+                        <span class="skill-badge">TensorFlow</span>
+                        <span class="skill-badge">PyTorch</span>
+                        <span class="skill-badge">Scikit-learn</span>
                     </div>
                 </div>
             </div>
@@ -161,11 +174,11 @@
             <div id="project-content">
                 
                 <!-- 1. Current Projects Content -->
-                <div id="content-current" class="tab-content active">
+                <div id="content-current" class="tab-content">
                     <div class="bg-[#24292f] p-6 rounded-lg border border-[#30363d] shadow-xl">
                         <h3 class="text-2xl font-bold text-[#5eead4] mb-3">AI-Based Contact Tracing Application</h3>
                         <p class="text-gray-400 mb-4 leading-relaxed">
-                            Reflecting on an inspiring journey in modern technology research! I’m thrilled to have contributed to a groundbreaking contact tracing project, where innovation meets real-world impact. We successfully designed the conceptual framework integrating several cutting-edge technologies.
+                            Reflecting on an inspiring journey in modern technology research! I'm thrilled to have contributed to a groundbreaking contact tracing project, where innovation meets real-world impact. We successfully designed the conceptual framework integrating several cutting-edge technologies.
                         </p>
 
                         <h4 class="text-lg font-semibold text-[#f0f6fc] mt-4 mb-2">Key Technologies Integrated:</h4>
@@ -213,7 +226,7 @@
         </section>
         <!-- END INTERACTIVE PROJECTS SECTION -->
 
-        <!-- Contact Information Section (New Addition) -->
+        <!-- Contact Information Section (RESTORED TO ORIGINAL LAYOUT) -->
         <section class="mb-10">
             <h2 class="text-2xl font-semibold section-header">Contact & Reach Out</h2>
             <div class="bg-[#24292f] p-6 rounded-lg border border-[#30363d] space-y-3">
@@ -221,13 +234,13 @@
                     <!-- Email Icon -->
                     <svg class="w-5 h-5 mr-3 text-[#38bdf8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-8 10v-5a2 2 0 00-2-2H8a2 2 0 00-2 2v5a2 2 0 002 2h6a2 2 0 002-2z"></path></svg>
                     <span class="text-gray-400">Email:</span> 
-                    <a href="mailto:ta-stencilus-dube@example.com" class="text-[#5eead4] hover:underline ml-2">ta-stencilus-dube@example.com</a>
+                    <a href="mailto:tdube@africau.edu" class="text-[#5eead4] hover:underline ml-2">tdube@africau.edu</a>
                 </div>
                 <div class="flex items-center">
-                    <!-- GitHub Icon -->
+                    <!-- GitHub Icon (with code brackets as in original) -->
                     <svg class="w-5 h-5 mr-3 text-[#38bdf8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                     <span class="text-gray-400">Code/GitHub:</span>
-                    <a href="#" class="text-[#5eead4] hover:underline ml-2" aria-label="Tavonga's GitHub Profile">github.com/tsd-ai</a>
+                    <a href="https://github.com/Stencilus" target="_blank" class="text-[#5eead4] hover:underline ml-2" aria-label="Tavonga's GitHub Profile">github.com/Stencilus</a>
                 </div>
                 <div class="flex items-center">
                     <!-- Location Icon -->
@@ -240,7 +253,7 @@
 
         <!-- Footer -->
         <footer class="mt-8 pt-6 border-t border-[#30363d] text-center text-gray-500 text-sm">
-            <p>&copy; 2025 Tavonga Stencilus Dube. Crafted for impact with AI & Tailwind CSS.</p>
+            <p>&copy; <span id="current-year">2025</span> Tavonga Stencilus Dube. Crafted for impact with AI & Tailwind CSS.</p>
         </footer>
 
     </div>
@@ -262,35 +275,48 @@
 
         // JavaScript for Tab Interactivity
         function showTab(tabId) {
-            // Hide all contents and deactivate all buttons
+            // Hide all tab contents
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.add('hidden');
             });
+            
+            // Remove active class from all buttons
             document.querySelectorAll('.tab-button').forEach(button => {
-                // Remove active classes
-                button.classList.remove('border-[#38bdf8]', 'text-[#38bdf8]', 'active');
-                // Add inactive classes
-                button.classList.add('border-transparent', 'text-gray-400', 'hover:text-[#5eead4]');
+                button.classList.remove('active', 'border-[#38bdf8]', 'text-[#38bdf8]');
+                button.classList.add('text-gray-400');
             });
 
             // Show selected content and activate selected button
             const selectedContent = document.getElementById(`content-${tabId}`);
+            const selectedButton = document.getElementById(`tab-${tabId}`);
+            
             if (selectedContent) {
                 selectedContent.classList.remove('hidden');
             }
-
-            const selectedButton = document.getElementById(`tab-${tabId}`);
+            
             if (selectedButton) {
-                // Add active classes
-                selectedButton.classList.add('border-[#38bdf8]', 'text-[#38bdf8]', 'active');
-                // Remove inactive classes
-                selectedButton.classList.remove('border-transparent', 'text-gray-400', 'hover:text-[#5eead4]');
+                selectedButton.classList.add('active', 'border-[#38bdf8]', 'text-[#38bdf8]');
+                selectedButton.classList.remove('text-gray-400');
             }
         }
 
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
         // Set the initial active tab on page load
         document.addEventListener('DOMContentLoaded', () => {
-            showTab('current'); 
+            showTab('current');
+            
+            // Add keyboard navigation for tabs
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const tabId = button.id.replace('tab-', '');
+                        showTab(tabId);
+                    }
+                });
+            });
         });
 
     </script>
